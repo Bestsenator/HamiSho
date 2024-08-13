@@ -85,7 +85,7 @@
 
 1. این مخزن را کلون کنید:
    ```bash
-   git clone https://github.com/yourusername/HamiSho.git
+   git clone https://github.com/Bestsenator/HamiSho.git
    ```
    
 2. وارد دایرکتوری پروژه شوید:
