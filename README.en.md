@@ -2,6 +2,10 @@
 
 **HamiSho** is a backend project developed using the Django framework, designed to manage and publish news and announcements for representatives. This project also allows users to register representatives and retrieve their information based on representative codes. The system can connect to a mobile application, enabling users to support representatives as supporters and send messages.
 
+## Related Project
+
+This backend project is connected and synchronized with a mobile application developed using Flutter. The mobile app allows users to interact with the backend, support representatives, and send messages. For more information about the Flutter project, please visit the [Flutter Project Repository](https://github.com/AliNajafzadeh7916).
+
 ## Features
 
 - **Publishing News and Announcements:** Publish new news and announcements by representatives.
@@ -157,3 +161,10 @@ If you wish to contribute to this project, you can:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
 4. Push your branch (`git push origin feature/AmazingFeature`).
 5. Open a Pull Request.
+
+## Special Thanks
+
+[Ali Najafzadeh](https://github.com/AliNajafzadeh7916)
+
+A special thanks to the developer of the Flutter application, who with their effort and skill, has developed this app and integrated it with the backend project. Without their hard work, creating this integrated system would not have been possible.
+
