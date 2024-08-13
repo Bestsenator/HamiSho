@@ -59,6 +59,12 @@ def uploadToSponsor(instance, filename):
     return os.path.join('sponsor', filename)
 
 
+def uploadToSocial(instance, filename):
+    ext = filename.split('.')[-1]
+    filename = f"{instance.Code}_{rand2Num()}.{ext}"
+    return os.path.join('social', filename)
+
+
 def uploadToDeveloper(instance, filename):
     ext = filename.split('.')[-1]
     filename = f"{instance.Code}_{rand2Num()}.{ext}"
@@ -151,6 +157,7 @@ class Post(models.Model):
     Code = models.IntegerField(default=ranInt, primary_key=True, editable=False)
     Candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
     Image = models.ImageField(upload_to=uploadToPost)
+    File = models.FileField(upload_to=uploadToPost, blank=True, null=True)
     Caption = models.TextField(max_length=2000)
     RegisterTime = jmodels.jDateTimeField(default=currentDateTime)
 
@@ -184,6 +191,7 @@ class News(models.Model):
     Candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
     Title = models.CharField(max_length=200)
     Image = models.ImageField(upload_to=uploadToNews)
+    File = models.FileField(upload_to=uploadToPost, blank=True, null=True)
     Content = models.TextField(max_length=2000)
     RegisterTime = jmodels.jDateTimeField(default=currentDateTime)
 
@@ -296,3 +304,16 @@ class Provider(models.Model):
     Logo = models.ImageField(upload_to=0)
     Slogan = models.CharField(max_length=150)
 
+
+class Social(models.Model):
+    Code = models.IntegerField(default=ranInt, primary_key=True)
+    Name = models.CharField(max_length=100)
+    Icon = models.ImageField(upload_to=uploadToSocial)
+
+
+class SocialMedia(models.Model):
+    Code = models.IntegerField(default=ranInt, primary_key=True)
+    Candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
+    Content = models.CharField(max_length=100)
+    Social = models.ForeignKey(Social, on_delete=models.CASCADE)
+    RegisterTime = jmodels.jDateTimeField(default=currentDateTime)

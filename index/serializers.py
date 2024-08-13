@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from index.models import Candidate, Post, News, Sponsor, Developer, Provider
+from index.models import Candidate, Post, News, Sponsor, Developer, Provider, Social, SocialMedia
 
 
 class CandidateSer(serializers.ModelSerializer):
@@ -43,3 +43,21 @@ class AppFileSer(serializers.ModelSerializer):
     class Meta:
         model = Candidate
         fields = ['AppFile']
+
+
+class SocialSer(serializers.ModelSerializer):
+    class Meta:
+        model = Social
+        fields = ['Name', 'Icon']
+
+
+class SocialMediaSer(serializers.ModelSerializer):
+    Social = serializers.SerializerMethodField()
+
+    class Meta:
+        model = SocialMedia
+        fields = ['Content', 'Social']
+
+    @staticmethod
+    def get_Social(obj):
+        return SocialSer(obj.Social).data

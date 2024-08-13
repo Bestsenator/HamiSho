@@ -9,4 +9,5 @@ urlpatterns = [
     path('setSupporter/', views.setSupporter),
     path('setMessageToCandidate/', views.setMessageToCandidate),
     path('getDeveloperInfo/', views.getDeveloperInfo),
+    path('getSocialCandidate/', views.getSocialCandidate),
 ]

@@ -142,3 +142,22 @@ def getDeveloperInfo(request):
         return Response(context)
 
 
+@api_view(['GET'])
+def getSocialCandidate(request):
+    resHeader = check.checkHeader(request.headers)
+    if resHeader.get('Status') != 200:
+        return Response(resHeader)
+    socialInfo = SocialMedia.objects.filter(Candidate=resHeader.get('Candidate'))
+    if socialInfo:
+        context = {
+            'Status': 200,
+            'SocialMedia': SocialMediaSer(socialInfo, many=True).data
+        }
+        return Response(context)
+    else:
+        context = {
+            'Status': 201,
+            'Message': 'Empty list'
+        }
+        return Response(context)
+
