@@ -78,7 +78,18 @@
 - [Python](https://www.python.org/downloads/) نسخه 3.8 یا بالاتر
 - [Django](https://www.djangoproject.com/) نسخه 3.2 یا بالاتر
 - [PostgreSQL](https://www.postgresql.org/) یا [SQLite](https://www.sqlite.org/) (براساس انتخاب شما)
+  
 
+## وابستگی‌های پروژه
+
+پکیج‌های زیر در این پروژه استفاده شده‌اند:
+
+- `Django==5.0.1`
+- `django-cors-headers==4.3.0`
+- `django-jalali==6.0.1`
+- `djangorestframework==3.14.0`
+- `jdatetime==5.0.0`
+- `psycopg2-binary`
 ## نصب و راه‌اندازی
 
 برای راه‌اندازی پروژه، مراحل زیر را دنبال کنید:
