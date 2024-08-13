@@ -17,6 +17,17 @@ To run this project, you need to install the following software and tools:
 - [Django](https://www.djangoproject.com/) version 3.2 or higher
 - [PostgreSQL](https://www.postgresql.org/) or [SQLite](https://www.sqlite.org/) (based on your choice)
 
+## Project Dependencies
+
+The following packages are used in this project:
+
+- `Django==5.0.1`
+- `django-cors-headers==4.3.0`
+- `django-jalali==6.0.1`
+- `djangorestframework==3.14.0`
+- `jdatetime==5.0.0`
+- `psycopg2-binary`
+
 ## Installation and Setup
 
 Follow these steps to set up the project:
