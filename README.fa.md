@@ -132,9 +132,8 @@
 
 لیستی از endpoint های موجود در API:
 
-- `GET /` - دسترسی به صفحه اصلی API
 - `GET /getCandidateInfo/` - دریافت اطلاعات کاندیدا
-- `POST /getPostCandidate/` - ارسال پست برای کاندیدا
+- `POST /getPostCandidate/` - دریافت پست های کاندیدا
 - `GET /getNewsCandidate/` - دریافت اخبار مربوط به کاندیدا
 - `POST /setSupporter/` - ثبت حامی برای کاندیدا
 - `POST /setMessageToCandidate/` - ارسال پیام به کاندیدا
@@ -145,25 +144,41 @@
 
 ```
 HamiSho/
-├── hami_sho/
+├── config/
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── representatives/
+├── api/
 │   ├── migrations/
 │   ├── models.py
 │   ├── serializers.py
 │   ├── views.py
 │   └── urls.py
-├── news/
+├── index/
 │   ├── migrations/
 │   ├── models.py
 │   ├── serializers.py
 │   ├── views.py
 │   └── urls.py
+├── funcs/
+│   ├── check.py
+│   └── verify.py
+├── media/
+│   ├── appFile/
+│   ├── BackgroundCondidate/
+│   ├── news/
+│   ├── OriginCondidate/
+│   ├── post/
+│   ├── social/
+│   ├── Sound/
+│   ├── sponser/
+│   └── verify.py
+├── static/
 ├── manage.py
-├── .env.example
+├── db.sqlite3
 ├── README.md
+├── README.fa.md
+├── README.en.md
 └── requirements.txt
 ```
 
