@@ -4,7 +4,7 @@
 
 ## Related Project
 
-This backend project is connected and synchronized with a mobile application developed using Flutter. The mobile app allows users to interact with the backend, support representatives, and send messages. For more information about the Flutter project, please visit the [Flutter Project Repository](ttps://github.com/AliNajafzadeh7916/HamiSho).
+This backend project is connected and synchronized with a mobile application developed using Flutter. The mobile app allows users to interact with the backend, support representatives, and send messages. For more information about the Flutter project, please visit the [Flutter Project Repository](https://github.com/AliNajafzadeh7916/HamiSho).
 
 ## Features
 
